@@ -2,8 +2,8 @@
  * Command Center — Google Apps Script Notification System
  *
  * Two triggers:
- *   1. Morning digest  — runs daily at 8:00 AM, sends a task summary email
- *   2. Nightly prompt  — runs daily at 9:00 PM, sends a reminder to plan tomorrow
+ *   1. Morning digest  — runs daily at 7:00 AM, sends a task summary email
+ *   2. Nightly prompt  — runs daily at 10:00 PM, sends a reminder to plan tomorrow
  *
  * SETUP (one-time, ~5 minutes):
  *   1. Go to script.google.com → New project → paste this entire file
@@ -20,8 +20,8 @@
 const CONFIG = {
   plannerUrl:    'https://crackerhands.github.io/command-center/',
   emailTo:       Session.getActiveUser().getEmail(), // your Gmail address automatically
-  morningHour:   8,   // 8 AM local time
-  eveningHour:   21,  // 9 PM local time
+  morningHour:   7,   // 7 AM local time
+  eveningHour:   22,  // 10 PM local time
   timezone:      'America/Chicago' // change to your timezone if needed
 };
 // ───────────────────────────────────────────────────────────────────────────
